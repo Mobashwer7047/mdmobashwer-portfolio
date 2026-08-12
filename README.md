@@ -1,14 +1,4 @@
-# Md Mobashwer Hossain Portfolio — Upload/Edit V3
-This version keeps the dashboard-style portfolio and adds:
-- Edit personal information
-- Add/delete unlimited projects
-- Project image OR video upload
-- Add/delete certificates and achievements
-- Certificate image/PDF upload
-- Resume PDF upload
-- Profile photo upload
-- Skills and education editing
-- GitHub, LinkedIn and email editing
-
-IMPORTANT:
-This static version stores edits/uploads in browser localStorage. It works on the same browser/device, but it is NOT a secure online CMS and changes will not automatically appear on other devices. For true anywhere/any-device editing, the next step is connecting authentication + cloud database/storage (for example Supabase/Firebase).
+# Md Mobashwer Portfolio — Complete Editor
+This version keeps the V2 dashboard design and adds an Edit Portfolio page.
+Features: edit profile/about/skills/education/contact, add/delete projects, upload project image/video, add/delete certificates/achievements, upload certificate image/video/PDF, profile photo, resume selector.
+Important: this browser-only version stores uploaded media in localStorage. Large files may exceed browser storage. For permanent uploads visible on every device, connect Firebase/Supabase/Cloudinary or another cloud storage + authentication.

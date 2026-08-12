@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Edit Portfolio — MMH</title><link rel="stylesheet" href="style.css"></head>
-<body><header class="topbar"><div class="brand"><div class="avatar">M</div><strong>MMH EDITOR</strong></div><div class="top-actions"><a href="index.html" class="button">View Website</a></div></header>
-<main class="editor">
-<section class="section"><span class="muted-label">PROFILE</span><h2>Edit personal information</h2>
-<label>Name<input id="name"></label><label>About / headline<input id="about"></label><label>Email<input id="email" type="email"></label><label>GitHub URL<input id="github" placeholder="https://github.com/..."></label><label>LinkedIn URL<input id="linkedin" placeholder="https://linkedin.com/in/..."></label>
-<label>Profile photo <input id="profileFile" type="file" accept="image/*"></label><div id="profilePreview" class="upload-preview"></div></section>
-
-<section class="section"><span class="muted-label">SKILLS</span><h2>Skills</h2><p class="note">One skill per line.</p><textarea id="skills" rows="8"></textarea></section>
-
-<section class="section"><span class="muted-label">EDUCATION</span><h2>Education</h2><p class="note">Add one education item per line.</p><textarea id="education" rows="7"></textarea></section>
-
-<section class="section"><span class="muted-label">FEATURED WORK</span><h2>Projects</h2><div id="projectEditor"></div><button class="button primary" type="button" onclick="addProject()">＋ Add Project</button></section>
-
-<section class="section"><span class="muted-label">CERTIFICATES</span><h2>Certificates & Achievements</h2><div id="certEditor"></div><button class="button primary" type="button" onclick="addCert()">＋ Add Certificate / Achievement</button></section>
-
-<section class="section"><span class="muted-label">RESUME</span><h2>Upload Resume</h2><input id="resumeFile" type="file" accept=".pdf,application/pdf"><div id="resumePreview" class="upload-preview"></div></section>
-
-<section class="section"><span class="muted-label">SAVE</span><h2>Save everything</h2><p class="note">This version stores uploaded files and edits in this browser. The same saved data will not automatically appear on another phone until a real online database/storage is connected.</p>
-<button class="button primary" type="button" onclick="saveAll()">Save All Changes</button> <button class="button" type="button" onclick="clearAll()">Reset</button><p id="saved"></p></section>
+<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Edit Portfolio — MMH</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="topbar"><div class="brand"><div class="avatar">M</div><strong>MMH — Edit Portfolio</strong></div><div class="top-actions"><a class="button" href="index.html">View Site</a></div></header>
+<main class="editor section">
+<h1>Portfolio Editor</h1><p class="note">Add, edit and delete your content. Photos/videos selected here are stored in this browser in this version. For permanent cloud uploads across every device, we can connect storage later.</p>
+<div class="item"><h3>Profile & About</h3><label>Name<input id="name"></label><label>Role / short line<input id="role"></label><label>About<textarea id="about"></textarea></label><label>Profile photo<input id="photo" type="file" accept="image/*"></label><img id="photoPreview" class="media-preview"></div>
+<div class="item"><h3>Skills</h3><label>Skills (comma separated)<textarea id="skills"></textarea></label><button class="button" onclick="save()">Save Skills</button></div>
+<div class="item"><h3>Add Project</h3><label>Project name<input id="pname"></label><label>Description<textarea id="pdesc"></textarea></label><label>Technology<input id="ptech"></label><label>GitHub / Demo link<input id="plink"></label><label>Project photo/video<input id="pmedia" type="file" accept="image/*,video/*"></label><button class="button primary" onclick="addProject()">＋ Add Project</button><div id="projectItems"></div></div>
+<div class="item"><h3>Education</h3><label>Education (one item per line)<textarea id="education"></textarea></label><button class="button" onclick="save()">Save Education</button></div>
+<div class="item"><h3>Add Certificate / Achievement</h3><label>Title<input id="cname"></label><label>Description<input id="cdesc"></label><label>Certificate/photo/video<input id="cmedia" type="file" accept="image/*,video/*,application/pdf"></label><button class="button primary" onclick="addCertificate()">＋ Add Certificate / Achievement</button><div id="certItems"></div></div>
+<div class="item"><h3>Resume</h3><label>Upload/replace Resume PDF<input id="resume" type="file" accept="application/pdf"></label><p class="upload-note">The selected PDF is saved in this browser for this version. A real online upload needs cloud storage.</p></div>
+<div class="item"><h3>Contact & Social</h3><label>Email<input id="email"></label><label>GitHub<input id="github"></label><label>LinkedIn<input id="linkedin"></label><button class="button primary" onclick="save()">Save Contact</button></div>
+<div class="editor-actions"><button class="button primary" onclick="save()">💾 Save All</button><button class="button danger" onclick="resetData()">Reset All</button></div><p id="saved"></p>
 </main><script src="admin.js"></script></body></html>

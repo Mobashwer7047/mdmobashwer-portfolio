@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Md Mobashwer Hossain — CSE, AI & Machine Learning portfolio">
-<title>MMH — Portfolio</title><link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Md Mobashwer Hossain — CSE, AI & Machine Learning portfolio">
+  <title>MMH — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topbar"><div class="brand"><div class="avatar" id="navAvatar">M</div><strong>MMH</strong><span class="chevron">⌄</span></div>
-<div class="top-actions"><a href="#projects" class="top-icon">⌘</a><a href="#contact" class="top-icon">●</a><a href="admin.html" class="button">Edit</a></div></header>
-<div class="layout"><aside class="sidebar"><div class="profile-mini"><div class="avatar large" id="sideAvatar">M</div><div><strong id="sideName">Md Mobashwer</strong><span id="sideRole">CSE • AI & ML</span></div></div>
-<nav><a class="active" href="#home">Overview</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#certificates">Certificates</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav>
-<div class="side-bottom"><a id="githubSide" href="#" target="_blank">GitHub ↗</a><a id="linkedinSide" href="#" target="_blank">LinkedIn ↗</a></div></aside>
-<main>
-<section id="home" class="hero"><div><span class="pill">PORTFOLIO</span><h1 id="name">Md Mobashwer Hossain</h1><p id="about" class="hero-text">CSE student focused on Artificial Intelligence, Machine Learning and practical software projects.</p><div class="hero-buttons"><a href="#projects" class="button primary">View Projects</a><a href="#contact" class="button">Contact Me</a></div></div>
-<div class="status-card"><span class="status-dot"></span><div><strong>Available for opportunities</strong><small>Internships • Projects • Collaboration</small></div></div></section>
-<section class="dashboard"><div class="section-head"><div><span class="muted-label">RECENT</span><h2>Featured work</h2></div><a href="#projects">View all →</a></div><div id="projects" class="cards"></div></section>
-<section id="skills" class="section"><span class="muted-label">TECH STACK</span><h2>Skills</h2><div id="skillsBox" class="skill-grid"></div></section>
-<section id="education" class="section"><span class="muted-label">BACKGROUND</span><h2>Education</h2><div id="educationBox"></div></section>
-<section id="certificates" class="section"><span class="muted-label">ACHIEVEMENTS</span><h2>Certificates & Achievements</h2><div id="certBox" class="cards"></div></section>
-<section id="resume" class="section"><span class="muted-label">DOCUMENT</span><h2>Resume</h2><div class="info-card wide resume-row"><div><b id="resumeName">My Resume</b><p>Upload your latest resume from the Edit page.</p></div><a id="resumeLink" class="button" href="#" target="_blank">Open Resume →</a></div></section>
-<section id="contact" class="section contact"><span class="muted-label">GET IN TOUCH</span><h2>Contact</h2><div class="contact-grid"><a id="emailBox" class="contact-item"><span>Email</span><b></b></a><a id="linkedinBox" class="contact-item" target="_blank"><span>LinkedIn</span><b>Connect on LinkedIn ↗</b></a><a id="githubBox" class="contact-item" target="_blank"><span>GitHub</span><b>View GitHub ↗</b></a></div></section>
-</main></div><footer>© 2026 Md Mobashwer Hossain</footer>
-<script src="app.js"></script></body></html>
+  <header class="topbar">
+    <div class="brand">
+      <div class="avatar">M</div>
+      <strong>MMH</strong>
+      <span class="chevron">⌄</span>
+    </div>
+    <div class="top-actions"><a href="admin.html" class="top-icon">✎</a>
+      <a href="#projects" class="top-icon">⌘</a>
+      <a href="#contact" class="top-icon">●</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="profile-mini"><div class="avatar large" id="miniAvatar">M</div><div><strong id="miniName">Md Mobashwer</strong><span id="miniRole">CSE • AI & ML</span></div></div>
+      <nav><a class="active" href="#home">Overview</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#certificates">Certificates</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav>
+      <div class="side-bottom"><a id="githubLink" href="#">GitHub ↗</a><a id="linkedinLink" href="#">LinkedIn ↗</a><a href="admin.html">✎ Edit Portfolio</a></div>
+    </aside>
+    <main>
+      <section id="home" class="hero"><div><span class="pill">PORTFOLIO</span><h1 id="name">Md Mobashwer Hossain</h1><p id="about" class="hero-text">CSE student focused on Artificial Intelligence, Machine Learning and practical software projects.</p><div class="hero-buttons"><a href="#projects" class="button primary">View Projects</a><a href="#contact" class="button">Contact Me</a></div></div><div class="status-card"><span class="status-dot"></span><div><strong>Available for opportunities</strong><small>Internships • Projects • Collaboration</small></div></div></section>
+      <section id="projects" class="dashboard"><div class="section-head"><div><span class="muted-label">RECENT</span><h2>Featured work</h2></div><a href="admin.html">Add / Edit →</a></div><div id="projectCards" class="cards"></div></section>
+      <section id="skills" class="section"><span class="muted-label">TECH STACK</span><h2>Skills</h2><div id="skillGrid" class="skill-grid"></div></section>
+      <section id="education" class="section"><span class="muted-label">BACKGROUND</span><h2>Education</h2><div id="educationBox"></div></section>
+      <section id="certificates" class="section"><span class="muted-label">ACHIEVEMENTS</span><h2>Certificates & Achievements</h2><div id="certBox" class="cards"></div></section>
+      <section id="resume" class="section"><span class="muted-label">DOCUMENT</span><h2>Resume</h2><div class="info-card wide resume-row"><div><b id="resumeName">My Resume</b><p>Upload/replace your latest PDF from the Edit page.</p></div><a class="button" href="resume.pdf">Open Resume →</a></div></section>
+      <section id="contact" class="section contact"><span class="muted-label">GET IN TOUCH</span><h2>Contact</h2><div id="contactGrid" class="contact-grid"></div></section>
+    </main>
+  </div>
+  <footer>© 2026 Md Mobashwer Hossain • mdmobashwer.dev</footer>
+<script src="app.js"></script></body>
+</html>
