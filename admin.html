@@ -1,1 +1,40 @@
-<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Edit Portfolio</title><link rel="stylesheet" href="style.css"></head><body><header><b>Edit Portfolio</b><a class="edit" href="index.html">View Site</a></header><main class="editor"><p class="note">Edit your information below. This first version saves changes in this browser. We can later connect a secure database so changes appear on every device.</p><label>Name<input id="name"></label><label>About<input id="about"></label><label>Skills — comma separated<textarea id="skills"></textarea></label><label>Projects — one per line: Name | Description | Technology<textarea id="projects"></textarea></label><label>Education — one item per line<textarea id="education"></textarea></label><label>Certificates/Achievements — one per line<textarea id="cert"></textarea></label><label>Email<input id="email"></label><label>GitHub<input id="github"></label><label>LinkedIn<input id="linkedin"></label><button class="btn" onclick="save()">Save Changes</button><p id="saved"></p></main><script src="admin.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MMH — Admin Editor</title><link rel="stylesheet" href="style.css">
+<style>
+.admin-wrap{max-width:1000px;margin:auto;padding:40px 6%}.admin-box{border:1px solid #292929;background:#0d0d0d;border-radius:14px;padding:20px;margin:14px 0}
+.admin-box h3{margin-top:0}.admin-box input,.admin-box textarea,.admin-box select{width:100%;margin:7px 0 14px;padding:11px;border:1px solid #333;border-radius:8px;background:#080808;color:#eee;font:inherit}
+.admin-box textarea{min-height:90px}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.actions{display:flex;gap:10px;flex-wrap:wrap}.danger{border-color:#633}.preview{max-width:180px;max-height:120px;border-radius:8px;margin:5px 0;display:block}.file-note{font-size:12px;color:#777}.saved{color:#6ee68c}.item{border-top:1px solid #282828;padding-top:15px;margin-top:15px}@media(max-width:700px){.row{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header class="topbar"><div class="brand"><div class="avatar">M</div><strong>MMH Admin</strong></div><div class="top-actions"><a class="button" href="index.html">View website</a></div></header>
+<main class="admin-wrap">
+<h1>Portfolio Editor</h1>
+<p class="file-note">Edit your information and upload your resume, certificate photos, project images and short project videos. This V3 stores changes in this browser. A later cloud/database version can make the same edits appear on every device.</p>
+
+<div class="admin-box"><h3>👤 Profile</h3>
+<label>Name<input id="name"></label><label>About<input id="about"></label>
+<label>Profile photo <input id="profileFile" type="file" accept="image/*"></label><img id="profilePreview" class="preview"></div>
+
+<div class="admin-box"><h3>💻 Skills</h3><textarea id="skills" placeholder="Python, C, C++, Machine Learning, SQL"></textarea></div>
+
+<div class="admin-box"><h3>🎓 Education</h3><textarea id="education" placeholder="One item per line"></textarea></div>
+
+<div class="admin-box"><h3>🚀 Projects</h3>
+<div id="projectEditor"></div><button class="button" onclick="addProject()">+ Add Project</button></div>
+
+<div class="admin-box"><h3>📜 Certificates & Achievements</h3>
+<div id="certEditor"></div><button class="button" onclick="addCert()">+ Add Certificate / Achievement</button></div>
+
+<div class="admin-box"><h3>📄 Resume</h3>
+<input id="resumeFile" type="file" accept="application/pdf"><p id="resumeName" class="file-note"></p></div>
+
+<div class="admin-box"><h3>📞 Contact</h3>
+<div class="row"><label>Email<input id="email"></label><label>GitHub URL<input id="github"></label><label>LinkedIn URL<input id="linkedin"></label></div></div>
+
+<div class="actions"><button class="button primary" onclick="saveAll()">Save All Changes</button><button class="button danger" onclick="resetAll()">Reset</button></div>
+<p id="saved" class="saved"></p>
+</main>
+<script src="admin.js"></script></body></html>
