@@ -1,103 +1,22 @@
-# Smart Campus Energy Analytics & Prediction
+# Md Mobashwer Hossain — Portfolio
 
-**Student:** Md Mobashwer Hossain  
-**Course:** B.Tech CSE (AI & ML)  
-**Project Type:** Data Analytics + Machine Learning + Interactive Dashboard
+A responsive, dark modern personal portfolio built with plain HTML, CSS and JavaScript.
 
-## 1. Project Overview
-Smart Campus Energy Analytics & Prediction is a Python-based project that analyzes electricity consumption patterns in campus buildings and predicts daily energy usage.
+## Files
+- `index.html` — portfolio content
+- `style.css` — responsive dark theme and layout
+- `script.js` — small navigation interaction
+- `CV.pdf` — downloadable CV (if included in this package)
 
-The application includes:
-- Synthetic campus energy data generation
-- Data cleaning and validation
-- Exploratory data analysis
-- Interactive charts
-- Correlation analysis
-- Linear Regression model
-- Model evaluation using MAE, RMSE and R²
-- A prediction form for estimating energy consumption
-- Downloadable processed data
+## Publish on GitHub Pages (mobile)
+1. Open your repository: https://github.com/Mobashwer7047/mdmobashwer-portfolio
+2. Upload **all files inside this folder** (not just the ZIP). Keep `index.html`, `style.css`, `script.js`, and `CV.pdf` in the repository root.
+3. Click **Commit changes**.
+4. Open repository **Settings → Pages**.
+5. Under Build and deployment, choose **Deploy from a branch**.
+6. Choose branch `main` and folder `/(root)`, then Save.
+7. Wait a few minutes. Your site should be available at:
+   https://mobashwer7047.github.io/mdmobashwer-portfolio/
 
-The project is designed to run without requiring a separate dataset. A realistic sample dataset is generated automatically when the application starts.
-
-## 2. Technology Stack
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Streamlit
-
-## 3. Installation
-
-```bash
-python -m venv venv
-```
-
-### Windows
-```bash
-venv\Scripts\activate
-```
-
-### Linux / Ubuntu / macOS
-```bash
-source venv/bin/activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-## 4. Run the Project
-
-```bash
-streamlit run app.py
-```
-
-The application will open in a browser.
-
-## 5. Main Features
-### Dashboard
-Shows total energy usage, average daily consumption, peak consumption and model R² score.
-
-### Data Analysis
-Displays the generated dataset, descriptive statistics and missing-value checks.
-
-### Visual Analytics
-Provides:
-- Daily energy consumption trend
-- Energy consumption by building
-- Temperature vs energy consumption
-- Feature correlation heatmap
-
-### Machine Learning
-A Linear Regression model uses:
-- Temperature
-- Humidity
-- Occupancy
-- Working Hours
-- Previous Day Energy
-
-to predict daily energy consumption.
-
-### Prediction
-Users can enter building conditions and receive an estimated energy consumption value.
-
-## 6. Project Structure
-
-```text
-Md_Mobashwer_Hossain_Smart_Campus_Project/
-├── app.py
-├── requirements.txt
-├── README.md
-└── Smart_Campus_Project_Report.docx
-```
-
-## 7. Educational Purpose
-This project demonstrates how data analytics and machine learning can be combined with a simple web dashboard to solve a practical campus-management problem.
-
-## 8. Author
-**Md Mobashwer Hossain**
+## Before publishing
+Review your contact details. This page uses only the information listed in the supplied CV. GitHub Pages is public, so only publish personal details you are comfortable sharing.
