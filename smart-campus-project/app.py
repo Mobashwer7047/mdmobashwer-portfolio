@@ -156,7 +156,7 @@ elif page == "Data Analysis":
     c1, c2 = st.columns(2)
     with c1:
         st.write("### Descriptive Statistics")
-        st.dataframe(df.describe(numeric_only=True), use_container_width=True)
+        st.dataframe(df.describe(), use_container_width=True)
 
     with c2:
         st.write("### Missing Values")
