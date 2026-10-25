@@ -154,9 +154,17 @@ elif page == "Data Analysis":
     st.dataframe(df, use_container_width=True)
 
     c1, c2 = st.columns(2)
-    with c1:
-        st.write("### Descriptive Statistics")
-        st.dataframe(df.describe(), use_container_width=True)
+    
+with c1:
+    st.write("### Descriptive Statistics")
+
+    numeric_df = df.select_dtypes(include="number")
+    stats = numeric_df.describe().round(2)
+
+    st.dataframe(
+        stats,
+        use_container_width=True
+    )
 
     with c2:
         st.write("### Missing Values")
