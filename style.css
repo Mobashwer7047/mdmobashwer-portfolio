@@ -14,7 +14,8 @@
   display: block;
   border: 2px solid #a6ffcb;
 }
-.topbar a.brand span {
-  font-size: 18px !important;
+header.topbar a.brand span {
+  font-size: 14px !important;
+  display: inline-block !important;
   line-height: 1 !important;
 }
