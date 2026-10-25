@@ -19,3 +19,8 @@ header.topbar a.brand span {
   display: inline-block !important;
   line-height: 1 !important;
 }
+/* Add space between project cards */
+#projects .project-grid {
+  gap: 24px;
+  row-gap: 24px;
+}
