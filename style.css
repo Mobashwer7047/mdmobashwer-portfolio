@@ -14,3 +14,6 @@
   display: block;
   border: 2px solid #a6ffcb;
 }
+.topbar.brand span {
+  font-size: 28px;
+}
