@@ -155,14 +155,14 @@ elif page == "Data Analysis":
 
     c1, c2 = st.columns(2)
     with c1:
-    st.write("### Descriptive Statistics")
+        st.write("### Descriptive Statistics")
 
-    numeric_df = df.select_dtypes(include="number")
-    stats = numeric_df.describe().round(2)
+        numeric_df = df.select_dtypes(include="number")
+        stats = numeric_df.describe().round(2)
 
-    st.dataframe(
-        stats,
-        use_container_width=True
+        st.dataframe(
+            stats,
+            use_container_width=True
     )
 
     with c2:
