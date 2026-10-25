@@ -24,3 +24,13 @@ header.topbar a.brand span {
   gap: 24px;
   row-gap: 24px;
 }
+/* Fix spacing between project cards */
+#projects .project-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important;
+}
+
+#projects .project-grid > .project-card {
+  margin-bottom: 0 !important;
+}
