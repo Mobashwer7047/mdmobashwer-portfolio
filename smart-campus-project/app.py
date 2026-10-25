@@ -154,8 +154,7 @@ elif page == "Data Analysis":
     st.dataframe(df, use_container_width=True)
 
     c1, c2 = st.columns(2)
-    
-with c1:
+    with c1:
     st.write("### Descriptive Statistics")
 
     numeric_df = df.select_dtypes(include="number")
