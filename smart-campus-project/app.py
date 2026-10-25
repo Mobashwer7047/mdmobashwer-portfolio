@@ -12,7 +12,7 @@ st.set_page_config(page_title="Smart Campus Energy Analytics", page_icon="⚡", 
 @st.cache_data
 def generate_data(n=360, seed=42):
     rng = np.random.default_rng(seed)
-    dates = pd.date_range("2025-01-01", periods=n, freq="D")
+    dates = pd.date_range(end=pd.Timestamp.today().normalize(), periods=n, freq="D")
     buildings = rng.choice(["Academic Block","Library","Hostel A","Hostel B","Laboratory"], n,
                            p=[.25,.15,.20,.20,.20])
     temp = np.clip(27+5*np.sin(np.arange(n)*2*np.pi/365)+rng.normal(0,2.2,n),17,40)
