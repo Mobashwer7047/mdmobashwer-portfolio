@@ -19,3 +19,20 @@ header.topbar a.brand span {
   display: inline-block !important;
   line-height: 1 !important;
 }
+/* Fix dashed line crossing hero buttons */
+.hero-actions {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-actions .btn {
+  position: relative;
+  z-index: 11;
+}
+
+.hero::after {
+  display: none !important;
+}
